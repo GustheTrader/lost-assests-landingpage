@@ -201,7 +201,7 @@ export default function Home() {
             <h2>A specialist division.<br /><em>A proven standard.</em></h2>
             <p>Lost Assets operates as a division of Advertising Audit Services International, a contract compliance firm specializing in advertising and marketing, risk management, and media performance.</p>
             <p>Our work reflects AASI&apos;s published professional principles and client-first service philosophy.</p>
-            <a className="button button-outline" href="https://www.adauditservintl.com/about.html" target="_blank" rel="noreferrer">Meet the AASI team <span>↗</span></a>
+            <a className="button button-outline" href="/aasi">Meet the AASI team <span>↗</span></a>
           </div>
           <div className="principles">
             {principles.map((principle, index) => (
@@ -249,7 +249,7 @@ export default function Home() {
         </a>
         <p>Proprietary tech. Professional judgment. Discreet recovery.</p>
         <div className="footer-links">
-          <a href="https://www.adauditservintl.com/about.html" target="_blank" rel="noreferrer">AASI website ↗</a>
+          <a href="/aasi">Explore AASI ↗</a>
           <span>© {new Date().getFullYear()} Advertising Audit Services International</span>
         </div>
       </footer>
