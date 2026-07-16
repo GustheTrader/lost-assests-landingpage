@@ -176,7 +176,7 @@ export default function AasiAboutPage() {
       <footer className="aasi-footer">
         <a className="aasi-brand" href="#aasi-top"><span className="aasi-brand-mark">A</span><span><strong>AASI</strong><small>Advertising Audit Services International</small></span></a>
         <p>Transparency. Accountability. Value.</p>
-        <div><a href="/">Lost Assets Division</a><span>© {new Date().getFullYear()} AASI, LLC</span></div>
+        <div><a href="/">AASI Home</a><span>© {new Date().getFullYear()} AASI, LLC</span></div>
       </footer>
     </main>
   );

@@ -12,8 +12,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host");
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host?.includes("localhost") ? "http" : "https");
   const origin = host ? `${protocol}://${host}` : "https://www.adauditservintl.com";
-  const title = "Lost Assets | A Division of AASI";
-  const description = "Proprietary technology and professional judgment for discreet asset discovery, verification, and recovery.";
+  const title = "AASI | Advertising Audit Services International";
+  const description = "Independent advertising and media audit expertise delivering transparency, accountability, and value across global marketing investments.";
 
   return {
     title,
@@ -23,13 +23,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       type: "website",
-      images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "Lost Assets — Proprietary Tech for Asset Recovery" }],
+      images: [{ url: `${origin}/aasi-og.png`, width: 1200, height: 630, alt: "AASI — Clarity Across Every Dollar" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og.png`],
+      images: [`${origin}/aasi-og.png`],
     },
   };
 }
