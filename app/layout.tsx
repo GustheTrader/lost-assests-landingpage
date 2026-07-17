@@ -23,13 +23,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       type: "website",
-      images: [{ url: `${origin}/aasi-og.png`, width: 1200, height: 630, alt: "AASI — Clarity Across Every Dollar" }],
+      images: [{ url: `${origin}/aasi-og.svg`, width: 1200, height: 630, alt: "AASI — Clarity Across Every Dollar" }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/aasi-og.png`],
+      images: [`${origin}/aasi-og.svg`],
     },
   };
 }

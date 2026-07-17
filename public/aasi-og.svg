@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#061d21"/>
+  <path d="M0 90h1200M0 210h1200M0 330h1200M0 450h1200M0 570h1200M120 0v630M300 0v630M480 0v630M660 0v630M840 0v630M1020 0v630" stroke="#b9d7d0" stroke-opacity=".08"/>
+  <circle cx="945" cy="315" r="205" fill="none" stroke="#b9d7d0" stroke-opacity=".18" stroke-width="2"/>
+  <circle cx="945" cy="315" r="136" fill="none" stroke="#b9d7d0" stroke-opacity=".12"/>
+  <path d="M802 276c52-98 186-141 278-63M807 361c71 83 206 92 280 7M945 110c-58 86-58 324 0 410M852 132c49 92 49 273 0 365M1038 132c-49 92-49 273 0 365" fill="none" stroke="#b9d7d0" stroke-opacity=".12"/>
+  <g transform="translate(86 76)"><rect x="15" y="15" width="70" height="70" transform="rotate(45 50 50)" fill="none" stroke="#d9b565" stroke-width="2"/><text x="50" y="65" fill="#d9b565" font-family="Georgia,serif" font-size="42" font-style="italic" text-anchor="middle">A</text></g>
+  <text x="210" y="126" fill="#fff" font-family="Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="10">AASI</text>
+  <text x="210" y="158" fill="#b9d7d0" font-family="Arial,sans-serif" font-size="13" letter-spacing="4">ADVERTISING AUDIT SERVICES INTERNATIONAL</text>
+  <text x="86" y="330" fill="#fff" font-family="Arial,sans-serif" font-size="72" font-weight="600">Clarity across</text>
+  <text x="86" y="412" fill="#d9b565" font-family="Georgia,serif" font-size="86" font-style="italic">every dollar.</text>
+  <text x="88" y="528" fill="#b9d7d0" font-family="Arial,sans-serif" font-size="18" letter-spacing="5">TRANSPARENCY  •  ACCOUNTABILITY  •  VALUE</text>
+</svg>
