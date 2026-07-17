@@ -1,3 +1,6 @@
+import { AasiConcierge } from "./AasiConcierge";
+import { AasiContactForm } from "./AasiContactForm";
+
 const capabilities = [
   ["Financial compliance", "Contract adherence, billing integrity, and recovery opportunity."],
   ["Risk analytics", "Advanced analysis to surface anomalies, overcharges, and control gaps."],
@@ -35,7 +38,7 @@ export default function AasiAboutPage() {
           <a href="#impact">Impact</a>
           <a href="#team">Leadership</a>
           <a href="#principles">Principles</a>
-          <a className="aasi-nav-cta" href="mailto:psewal@adauditservintl.com?subject=AASI%20Inquiry">Start a conversation <b>↗</b></a>
+          <a className="aasi-nav-cta" href="#contact">Start a conversation <b>↗</b></a>
         </nav>
       </header>
 
@@ -54,9 +57,13 @@ export default function AasiAboutPage() {
 
         <div className="aasi-world-map" aria-hidden="true">
           <div className="globe-shell">
+            <div className="globe-atmosphere" />
             <div className="globe-land" />
-            <span className="globe-lat lat-one" /><span className="globe-lat lat-two" /><span className="globe-lat lat-three" />
-            <span className="globe-long long-one" /><span className="globe-long long-two" />
+            <span className="globe-lat lat-one" /><span className="globe-lat lat-two" /><span className="globe-lat lat-three" /><span className="globe-lat lat-four" /><span className="globe-lat lat-five" />
+            <span className="globe-long long-one" /><span className="globe-long long-two" /><span className="globe-long long-three" /><span className="globe-long long-four" />
+            <span className="globe-equator" />
+            <span className="globe-signal signal-na" /><span className="globe-signal signal-sa" /><span className="globe-signal signal-eu" /><span className="globe-signal signal-af" /><span className="globe-signal signal-apac" />
+            <span className="globe-arc arc-one" /><span className="globe-arc arc-two" /><span className="globe-arc arc-three" />
           </div>
         </div>
 
@@ -166,11 +173,20 @@ export default function AasiAboutPage() {
         </div>
       </section>
 
-      <section className="aasi-cta">
-        <div className="aasi-eyebrow"><span /> Start with clarity</div>
-        <h2>Make every marketing<br />investment <em>accountable.</em></h2>
-        <p>Bring independent evidence, global experience, and proprietary analytics to your next audit engagement.</p>
-        <a className="aasi-button primary" href="mailto:psewal@adauditservintl.com?subject=AASI%20Engagement%20Inquiry">Speak with AASI <span>↗</span></a>
+      <section className="aasi-contact-section" id="contact">
+        <div className="contact-intro">
+          <div className="aasi-eyebrow"><span /> Start with clarity</div>
+          <h2>Make every marketing<br />investment <em>accountable.</em></h2>
+          <p>Tell us what you are looking to understand, verify, or improve. AASI will review the request and respond with a confidential next step.</p>
+          <div className="contact-direct">
+            <small>Direct contact</small>
+            <a href="tel:+14158280779">+1 415 828 0779</a>
+            <a href="mailto:psewal@adauditservintl.com">psewal@adauditservintl.com</a>
+          </div>
+          <div className="contact-service-note"><span>01</span><p><strong>White-glove response</strong>Every inquiry is reviewed by the AASI team—not routed to a generic sales queue.</p></div>
+          <div className="contact-service-note"><span>02</span><p><strong>Confidential by design</strong>Begin with a high-level overview; sensitive records are not required at this stage.</p></div>
+        </div>
+        <AasiContactForm />
       </section>
 
       <footer className="aasi-footer">
@@ -178,6 +194,7 @@ export default function AasiAboutPage() {
         <p>Transparency. Accountability. Value.</p>
         <div><a href="/">AASI Home</a><span>© {new Date().getFullYear()} AASI, LLC</span></div>
       </footer>
+      <AasiConcierge />
     </main>
   );
 }
