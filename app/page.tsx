@@ -22,6 +22,93 @@ const processSteps = [
 
 const principles = ["Confidentiality", "Integrity", "Professional competence", "Client-first service"];
 
+const searchAreas = [
+  {
+    number: "01",
+    title: "State unclaimed property",
+    sources: "State treasurers · MissingMoney",
+    copy: "Bank accounts, wages, insurance remittances, utility deposits, securities, and other property reported to state custody.",
+    records: "Identity, address history, ownership records, and heirship documents.",
+  },
+  {
+    number: "02",
+    title: "Abandoned pensions",
+    sources: "PBGC · Missing Participants",
+    copy: "Unclaimed retirement benefits connected to terminated plans, former employers, transferred plans, or annuity notifications.",
+    records: "Employment history, plan details, identity, and beneficiary or heir records.",
+  },
+  {
+    number: "03",
+    title: "U.S. savings bonds",
+    sources: "U.S. Treasury · State custody",
+    copy: "Matured, unredeemed, lost, or inherited savings bonds that may require Treasury, state, or manual historical research.",
+    records: "Owner information, issue details, serial numbers when known, and proof of entitlement.",
+  },
+  {
+    number: "04",
+    title: "Life insurance benefits",
+    sources: "Insurers · State funds · VA Insurance",
+    copy: "Unclaimed death benefits, lost-policy proceeds, and certain veterans’ insurance funds awaiting a beneficiary or lawful heir.",
+    records: "Death certificate, policy details, beneficiary evidence, identity, and relationship proof.",
+  },
+  {
+    number: "05",
+    title: "Securities and dividends",
+    sources: "States · Transfer agents · SEC distributions",
+    copy: "Stocks, dividends, brokerage residuals, corporate-action proceeds, and case-specific distributions to harmed investors.",
+    records: "Statements, certificates, ownership history, identity, and estate authority when applicable.",
+  },
+  {
+    number: "06",
+    title: "Safe deposit contents",
+    sources: "State tangible-property programs",
+    copy: "Physical contents transferred from abandoned safe deposit boxes, including documents, valuables, and other inventoried property.",
+    records: "Box records, identity, inventory support, and court or heirship documents when required.",
+  },
+  {
+    number: "07",
+    title: "Federal refunds",
+    sources: "IRS · HUD/FHA · Federal agencies",
+    copy: "Tax refunds, FHA mortgage-insurance refunds, and other federal payments that were undeliverable or remain unclaimed.",
+    records: "Tax or loan information, agency records, identity, and proof of the underlying transaction.",
+  },
+  {
+    number: "08",
+    title: "Settlements and court funds",
+    sources: "Administrators · Courts · Bankruptcy ledgers",
+    copy: "Class-action proceeds, mass-tort distributions, bankruptcy funds, and court-held balances tied to an eligible claimant.",
+    records: "Case-specific claim forms, identity, and evidence of purchase, employment, injury, or entitlement.",
+  },
+  {
+    number: "09",
+    title: "Mineral rights and royalties",
+    sources: "County records · Operators · State funds",
+    copy: "Oil and gas royalties, mineral interests, suspended payments, and fractured ownership requiring title and heir research.",
+    records: "Deeds, division orders, probate records, heirship affidavits, and operator correspondence.",
+  },
+  {
+    number: "10",
+    title: "Veterans’ funds",
+    sources: "VA programs · Service records",
+    copy: "Potential veterans’ benefits and related funds beyond insurance, often requiring careful next-of-kin identification.",
+    records: "Military service records, death certificate, relationship proof, and program-specific VA forms.",
+  },
+  {
+    number: "11",
+    title: "Deposits and overpayments",
+    sources: "States · Utilities · Corporate holders",
+    copy: "Utility deposits, corporate overpayments, vendor credits, and smaller residual refunds suited to broad screening.",
+    records: "Identity, former addresses, account history, and basic proof of ownership.",
+  },
+  {
+    number: "12",
+    title: "Probate and missing heirs",
+    sources: "Court dockets · Estate records · State funds",
+    copy: "Estate residuals, unclaimed inheritances, missing-heir matters, and assets requiring probate or fiduciary authority.",
+    records: "Death certificates, wills, court orders, genealogy, and complete heirship evidence.",
+  },
+];
+
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -216,6 +303,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="coverage-section section" id="search-areas">
+        <div className="coverage-heading">
+          <div>
+            <div className="eyebrow dark"><span /> Twelve recovery intelligence silos</div>
+            <h2>Where we search.<br /><em>How we organize.</em></h2>
+          </div>
+          <div className="coverage-intro">
+            <p>Every potential asset enters a separate research track based on its custodian, governing process, required evidence, and recovery pathway. This keeps findings organized and gives each claim a clear record of source, status, and next action.</p>
+            <div className="coverage-method">
+              <span>Official-source research</span>
+              <span>Human-reviewed matching</span>
+              <span>State-specific compliance</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="coverage-grid">
+          {searchAreas.map((area) => (
+            <article className="coverage-card" key={area.number}>
+              <div className="coverage-card-top">
+                <span className="coverage-number">{area.number}</span>
+                <span className="coverage-status"><i /> Research silo</span>
+              </div>
+              <h3>{area.title}</h3>
+              <small>{area.sources}</small>
+              <p>{area.copy}</p>
+              <div className="coverage-records">
+                <span>Typical evidence</span>
+                <strong>{area.records}</strong>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="coverage-note">
+          <span>Research standard</span>
+          <p>We prioritize official databases, public records, authorized client information, and documented research logs. Availability, licensing, fees, documents, and claim procedures vary by jurisdiction and asset type. We do not rely on unauthorized scraping or promise that a search will identify recoverable property.</p>
+          <a href="#contact">Start a confidential review <b>↗</b></a>
+        </div>
+      </section>
+
       <section className="contact-section section" id="contact">
         <div className="contact-copy">
           <div className="eyebrow dark"><span /> Confidential inquiry</div>
@@ -255,6 +383,7 @@ export default function Home() {
         </a>
         <p>Proprietary tech. Professional judgment. Discreet recovery.</p>
         <div className="footer-links">
+          <a href="#search-areas">Explore search coverage ↓</a>
           <a href="/aasi">Explore AASI ↗</a>
           <span>© {new Date().getFullYear()} Advertising Audit Services International</span>
         </div>
